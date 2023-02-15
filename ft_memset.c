@@ -1,12 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: caunhach <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/08 11:34:07 by caunhach          #+#    #+#             */
+/*   Updated: 2023/02/08 11:50:59 by caunhach         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-void    *ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
-    unsigned char *p;
+	size_t	i;
 
-    p = s;
-    while(n--)
-        *p++ = c;
-    return (s);
+	i = 0;
+	while (i < n)
+		*(unsigned char *)(s + i++) = c;
+	return (s);
 }
-//ln 5 : unsigned char to protect bitwise operations on the value, or when you want to ensure that the value is always non-negative.
