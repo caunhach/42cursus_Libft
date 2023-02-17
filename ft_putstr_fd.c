@@ -6,14 +6,17 @@
 /*   By: caunhach <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 19:11:49 by caunhach          #+#    #+#             */
-/*   Updated: 2023/02/15 19:12:06 by caunhach         ###   ########.fr       */
+/*   Updated: 2023/02/16 22:27:36 by caunhach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-	s = NULL;
-	(void)fd;
+	while (*s)
+	{
+		ft_putchar_fd(*s, fd);
+		s++;
+	}
 }
