@@ -6,7 +6,7 @@
 /*   By: caunhach <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 19:21:15 by caunhach          #+#    #+#             */
-/*   Updated: 2023/02/15 19:21:33 by caunhach         ###   ########.fr       */
+/*   Updated: 2023/02/17 10:30:19 by caunhach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void    ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	void (*g)(void *);
+	void (*f)(void *) = NULL;
+	del = f;
 	lst = NULL;
-	g = del;
 }

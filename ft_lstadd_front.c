@@ -6,14 +6,14 @@
 /*   By: caunhach <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 19:16:22 by caunhach          #+#    #+#             */
-/*   Updated: 2023/02/15 19:16:46 by caunhach         ###   ########.fr       */
+/*   Updated: 2023/02/17 09:40:31 by caunhach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
-	lst = NULL;
-	new = NULL;
+	new -> next = *lst;
+	*lst = new;
 }

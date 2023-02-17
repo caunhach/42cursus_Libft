@@ -6,15 +6,13 @@
 /*   By: caunhach <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 19:20:28 by caunhach          #+#    #+#             */
-/*   Updated: 2023/02/15 19:20:48 by caunhach         ###   ########.fr       */
+/*   Updated: 2023/02/17 10:26:21 by caunhach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void    ft_lstdelone(t_list *lst, void (*del)(void *))
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	void (*d)(void *);
-	d = del;
-	lst = NULL;
+	(*del)(lst -> content);
 }

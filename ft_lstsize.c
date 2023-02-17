@@ -6,14 +6,24 @@
 /*   By: caunhach <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 19:17:49 by caunhach          #+#    #+#             */
-/*   Updated: 2023/02/15 19:18:22 by caunhach         ###   ########.fr       */
+/*   Updated: 2023/02/17 10:02:32 by caunhach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int     ft_lstsize(t_list *lst)
+int	ft_lstsize(t_list *lst)
 {
-	lst = NULL;
-	return (0);
+	int	i;
+
+	i = 0;
+	if (!lst)
+		return (0);
+	while (lst -> next)
+	{
+		lst = lst -> next;
+		i++;
+	}
+	i++;
+	return (i);
 }
