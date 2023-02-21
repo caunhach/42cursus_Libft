@@ -6,7 +6,7 @@
 /*   By: caunhach <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 16:46:42 by caunhach          #+#    #+#             */
-/*   Updated: 2023/02/14 16:50:16 by caunhach         ###   ########.fr       */
+/*   Updated: 2023/02/21 15:02:06 by caunhach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	i = ft_strlen(dest);
 	j = 0;
 	len_s = ft_strlen(src);
+	if (dest == NULL && size == 0)
+		return (len_s);
 	if (i < size)
 	{
 		while (*src && i + j < size - 1)

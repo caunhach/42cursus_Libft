@@ -6,7 +6,7 @@
 /*   By: caunhach <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 22:37:32 by caunhach          #+#    #+#             */
-/*   Updated: 2023/02/14 22:47:54 by caunhach         ###   ########.fr       */
+/*   Updated: 2023/02/21 13:40:31 by caunhach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	len;
 
-	if (!s1 && !set)
+	if (!set)
+		return (ft_strdup(s1));
+	if (!s1)
 		return (NULL);
 	while (*s1 && ft_strchr(set, *s1))
 		s1++;

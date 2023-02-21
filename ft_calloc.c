@@ -6,7 +6,7 @@
 /*   By: caunhach <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 20:18:44 by caunhach          #+#    #+#             */
-/*   Updated: 2023/02/14 20:28:46 by caunhach         ###   ########.fr       */
+/*   Updated: 2023/02/20 14:54:18 by caunhach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,12 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*res;
 
+	if (nmemb == SIZE_MAX || size == SIZE_MAX)
+		return (NULL);
 	res = (void *)malloc(nmemb * size);
 	if (!res)
 		return (NULL);
-	ft_bzero(res, nmemb * size);
+	if (res)
+		ft_bzero(res, nmemb * size);
 	return (res);
 }

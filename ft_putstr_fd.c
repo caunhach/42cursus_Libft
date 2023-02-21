@@ -6,7 +6,7 @@
 /*   By: caunhach <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 19:11:49 by caunhach          #+#    #+#             */
-/*   Updated: 2023/02/16 22:27:36 by caunhach         ###   ########.fr       */
+/*   Updated: 2023/02/21 15:01:00 by caunhach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
+	if (s == NULL)
+		return ;
 	while (*s)
 	{
 		ft_putchar_fd(*s, fd);

@@ -6,7 +6,7 @@
 /*   By: caunhach <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/14 18:16:59 by caunhach          #+#    #+#             */
-/*   Updated: 2023/02/14 19:52:52 by caunhach         ###   ########.fr       */
+/*   Updated: 2023/02/21 15:05:19 by caunhach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,13 +19,15 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	len_big = ft_strlen(big);
 	len_little = ft_strlen(little);
-	if (len_little == 0)
+	if (*little == 0)
 		return ((char *)big);
+	if (len == 0)
+		return (NULL);
 	while (len-- >= len_little && *big != '\0')
 	{
-		if (ft_memcmp(big, little, len_little) == 0)
+		if (ft_strncmp(big, little, len_little) == 0)
 			return ((char *)big);
 		big++;
 	}
-	return (0);
+	return (NULL);
 }

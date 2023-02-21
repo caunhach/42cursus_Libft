@@ -6,7 +6,7 @@
 #    By: caunhach <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/15 17:50:21 by caunhach          #+#    #+#              #
-#    Updated: 2023/02/15 18:39:21 by caunhach         ###   ########.fr        #
+#    Updated: 2023/02/20 17:54:03 by caunhach         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,27 +45,35 @@ SRCS =	ft_isalnum.c \
 	ft_strmapi.c \
 	ft_strtrim.c \
 	ft_striteri.c \
-	ft_lstnew.c \
-	ft_lstadd_front.c \
-	ft_lstclear.c \
-	ft_lstdelone.c \
-	ft_lstiter.c \
-	ft_lstlast.c \
-	ft_lstmap.c \
-	ft_lstnew.c \
-	ft_lstsize.c
+
+SRCS_BNS = ft_lstnew.c \
+	   ft_lstadd_front.c \
+	   ft_lstclear.c \
+	   ft_lstdelone.c \
+	   ft_lstiter.c \
+	   ft_lstlast.c \
+	   ft_lstmap.c \
+	   ft_lstadd_back.c \
+	   ft_lstsize.c
 
 OBJS = $(SRCS:.c=.o)
+
+OBJS_BNS = $(SRCS_BNS:.c=.o)
 
 FLAGS = -Wall -Wextra -Werror
 
 $(NAME):
 	gcc $(FLAGS) -c $(SRCS) -I./
 	ar rc $(NAME) $(OBJS)
+
 all: $(NAME)
 
+bonus: $(NAME)
+	gcc $(FLAGS) -c $(SRCS_BNS) -I./
+	ar rc $(NAME) $(OBJS_BNS)
+
 clean:
-	rm -f $(OBJS)
+	rm -f $(OBJS) $(OBJS_BNS)
 fclean: clean
 	rm -f $(NAME)
 re : fclean all

@@ -6,7 +6,7 @@
 /*   By: caunhach <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 19:21:57 by caunhach          #+#    #+#             */
-/*   Updated: 2023/02/17 15:34:36 by caunhach         ###   ########.fr       */
+/*   Updated: 2023/02/19 16:12:34 by caunhach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-	while(lst)
+	while (lst)
 	{
 		(*f)(lst -> content);
 		lst = lst -> next;
