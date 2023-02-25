@@ -6,7 +6,7 @@
 #    By: caunhach <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/02/15 17:50:21 by caunhach          #+#    #+#              #
-#    Updated: 2023/02/20 17:54:03 by caunhach         ###   ########.fr        #
+#    Updated: 2023/02/21 16:56:32 by caunhach         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,3 +77,5 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 re : fclean all
+
+.PHONY: all bonus clean fclean re
